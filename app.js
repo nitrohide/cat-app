@@ -71,3 +71,10 @@ function previousCat() {
   let index = cats.indexOf(catImage);
   images[0].src = cats[index - 1];
 }
+
+var angle = 0,
+  img = document.getElementById('container');
+document.getElementById('button').onclick = function() {
+  angle = (angle + 90) % 360;
+  img.className = "rotate" + angle;
+}
